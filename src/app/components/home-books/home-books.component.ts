@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {ServiceBooksService} from '../../service-books.service';
-import {Observable} from 'rxjs';
 import {Book} from '../../models';
-import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home-books',

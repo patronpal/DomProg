@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Book} from './models';
-import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +21,6 @@ export class ServiceBooksService {
 
   getAllBooks(): Book[] {
     return JSON.parse(localStorage.getItem('book'));
-  }
-
-  getAllBooksByRx(): Observable<Book[]> {
-    const mm: Observable<Book[]> = JSON.parse(localStorage.getItem('book'));
-    console.log('rx --->', mm);
-    return mm;
   }
 
   getBook(param: string): Book{
