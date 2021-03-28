@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.book {
+  display: block;
+  color: #888;
+  margin-bottom: .8rem;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  background: #333333;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  border: 1px solid black;
+}
+
+.btn-2 {
+  margin: 0.5px;
+}
+
+.btnhome {
+  margin-top: 2px;
+}
+
+.bookInList {
+  margin:10px auto;
+}
+
+.validation {
+  color: red;
+}
+
+.invalid {
+  color: red;
+}
+
+.form-control {
+  display: block;
+  margin-top: 0.3rem;
+  margin-bottom: .5rem;
+}
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+ td {
+   border: 1px solid black;
+ }
+
+table {
+  border-collapse: collapse;
+}

@@ -1,0 +1,38 @@
+<h1>Список книг</h1>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>Автор</th>
+    <th>Название</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let book of allBooks; trackBy: identify">
+    <td> {{book.author}} </td>
+    <td> {{book.title}} </td>
+    <td>
+      <button
+        class="btn btn-2"
+        [routerLink]="['/editbook', book.id]"
+      >
+        открыть
+      </button>
+      <button
+        class="btn btn-2"
+        (click)="delBook(book.id)"
+      >
+        удалить
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<button type="button"
+        (click)="createBookIntoList()"
+        class="btn btnhome"
+>Добавить книгу
+</button>

@@ -1,0 +1,40 @@
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="book" class="book" [ngClass]="{invalid: form.get('title').touched && form.get('title').invalid}">
+    <label for="title">Название: </label>
+    <input id="title" type="text" formControlName="title">
+
+    <div
+      *ngIf="form.get('title').touched  && form.get('author').invalid"
+      class="validation">
+      <small >Название обязательно к заполнению</small>
+    </div>
+  </div>
+
+  <div class="book" [ngClass]="{invalid: form.get('author').touched && form.get('author').invalid}">
+    <label for="author">Автор:</label>
+    <input id="author" type="text" formControlName="author">
+
+    <div
+      *ngIf="form.get('author').touched && form.get('author').invalid"
+      class="validation">
+      <small *ngIf="form.get('author').errors.required">Автор обязателен к заполнению</small>
+    </div>
+  </div>
+
+  <div class="book" [ngClass]="{invalid: form.get('quantity').touched && form.get('quantity').invalid}">
+    <label for="quantity">Страниц:</label>
+    <input id="quantity" type="text" formControlName = "quantity">
+
+    <div
+      *ngIf="form.get('quantity').touched && form.get('quantity').invalid"
+      class="validation">
+      <small *ngIf="form.get('quantity').errors.required">Количество страниц обязательно к заполнению</small>
+    </div>
+  </div>
+
+  <button type="submit" class="btn"
+          [disabled]="form.invalid">Внести изменения
+  </button>
+</form>
